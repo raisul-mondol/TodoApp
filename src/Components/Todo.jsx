@@ -39,7 +39,7 @@ const Todo = () => {
 
     const[Todos,dispatch]=useReducer(TodoReducer,InitialTodos);
   return (
-    <div className="min-h-screen bg-[url('/images/pic8.jpg')] bg-no-repeat bg-cover">
+    <div className="min-h-screen bg-black">
     <h1 className="text-3xl md:text-4xl font-bold text-white text-center py-6 bg-red-600 bg-opacity-80 rounded shadow-md">
       TodoAPP
     </h1>
