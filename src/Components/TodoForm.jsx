@@ -2,20 +2,18 @@ import React, { useState } from 'react';
 
 const TodoForm = ({ dispatch }) => {
   const [text, setText] = useState('');
-
-  // ✅ Handle form submit
   const HandleSubmit = (e) => {
-    e.preventDefault(); // ❗ Fixed typo here
+    e.preventDefault(); 
 
-    // ✅ Skip if input is empty or only spaces
+  
     if (!text.trim()) {
       return;
     }
 
-    // ✅ Send action to reducer
+   
     dispatch({ type: 'TodoADD', payload: text });
 
-    // ✅ Clear the input field
+   
     setText('');
   };
 
@@ -28,7 +26,7 @@ const TodoForm = ({ dispatch }) => {
         onSubmit={HandleSubmit}
         className="flex w-full justify-center items-center gap-3 mt-4"
       >
-        {/* ✅ Input field for todo text */}
+       
         <input
           value={text}
           onChange={(e) => setText(e.target.value)}
